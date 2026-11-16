@@ -520,3 +520,15 @@ REA е предназначен за законни изследвания, об
 ключове, неразрешено споделяне на ключове и заобикаляне на лицензионни
 ограничения не са разрешени. Тези насоки не изменят лиценза MIT или лицензите на
 трети страни.
+
+## Transformaiton.com fork
+
+This translation follows the upstream REA README. Customer pages for this fork are in English.
+
+- [Install](../INSTALL.md)
+- [Usage](../USAGE.md)
+- [Transformaiton.com](https://transformaiton.com/)
+- [info@transformaiton.com](mailto:info@transformaiton.com)
+- [Transformaiton on GitHub](https://github.com/Transformaiton)
+
+![REA by Transformaiton.com terminal recording](../assets/transformaiton-rea-demo.gif)

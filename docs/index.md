@@ -42,6 +42,7 @@ npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --
 ```
 
 See [installation and setup](getting-started/installation.md) for requirements and configuration.
+This fork's customer pages are [Install](INSTALL.md) and [Usage](USAGE.md).
 
 For runtime instrumentation, see the [Frida guide](guides/runtime/frida-instrumentation.md).
 

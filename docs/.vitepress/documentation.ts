@@ -4,6 +4,16 @@ export const documentationSections = [
     text: "Getting started",
     items: [
       {
+        text: "Customer install",
+        source: "INSTALL.md",
+        route: "/INSTALL",
+      },
+      {
+        text: "Customer usage",
+        source: "USAGE.md",
+        route: "/USAGE",
+      },
+      {
         text: "Installation and setup",
         source: "getting-started/installation.md",
         route: "/installation",

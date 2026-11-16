@@ -400,3 +400,15 @@ npx rea-agents@latest setup
 Ο κώδικας που έχει δημιουργηθεί για το REA διατίθεται με την άδεια MIT. Το υλικό τρίτων διατηρεί τις δικές του άδειες και δηλώσεις πνευματικών δικαιωμάτων. Δες τις [δηλώσεις για υλικό τρίτων](../../THIRD_PARTY_NOTICES.md) για τον κατάλογο εξαρτήσεων, τα διατηρημένα κείμενα αδειών και τους όρους των εξωτερικών εργαλείων.
 
 **Πρέπει να αποκτήσεις νόμιμα τα εμπορικά εργαλεία και να έχεις δικαίωμα χρήσης τους**, συμπεριλαμβανομένων των IDA Pro / Hex-Rays decompilers, Hopper και JEB, σύμφωνα με τις αντίστοιχες άδειές τους. Το REA δεν παρέχει άδεια εργαλείου, κλειδί ή δικαίωμα ενεργοποίησης. Οι δοκιμαστικές εκδόσεις και τα demos εξακολουθούν να υπόκεινται στους όρους του προμηθευτή, συμπεριλαμβανομένων των περιορισμών χρήστη, λειτουργιών, αυτοματοποίησης και κοινοποίησης αποτελεσμάτων. Δεν επιτρέπονται σπασμένες εκδόσεις, κλεμμένα κλειδιά, μη εξουσιοδοτημένη κοινοποίηση κλειδιών ή παράκαμψη περιορισμών αδειοδότησης. Αυτές οι οδηγίες δεν τροποποιούν την άδεια MIT ή τις άδειες τρίτων.
+
+## Transformaiton.com fork
+
+This translation follows the upstream REA README. Customer pages for this fork are in English.
+
+- [Install](../INSTALL.md)
+- [Usage](../USAGE.md)
+- [Transformaiton.com](https://transformaiton.com/)
+- [info@transformaiton.com](mailto:info@transformaiton.com)
+- [Transformaiton on GitHub](https://github.com/Transformaiton)
+
+![REA by Transformaiton.com terminal recording](../assets/transformaiton-rea-demo.gif)

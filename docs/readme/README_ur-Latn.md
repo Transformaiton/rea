@@ -498,3 +498,15 @@ feature, automation aur output sharing ki pabandiyan bhi shamil hain. Cracked
 copies, chori ki hui keys, ghair ijazati key sharing aur license restrictions
 bypass karne ki ijazat nahi. Yeh guidance MIT ya third-party licenses ko
 tabdeel nahi karti.
+
+## Transformaiton.com fork
+
+This translation follows the upstream REA README. Customer pages for this fork are in English.
+
+- [Install](../INSTALL.md)
+- [Usage](../USAGE.md)
+- [Transformaiton.com](https://transformaiton.com/)
+- [info@transformaiton.com](mailto:info@transformaiton.com)
+- [Transformaiton on GitHub](https://github.com/Transformaiton)
+
+![REA by Transformaiton.com terminal recording](../assets/transformaiton-rea-demo.gif)

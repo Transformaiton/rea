@@ -6,6 +6,8 @@ product pages. The VitePress documentation source is this `docs/` tree.
 
 ## Getting started
 
+- [Customer install](INSTALL.md) for this Transformaiton.com fork
+- [Customer usage](USAGE.md) for landing pages and sites you are allowed to study
 - [Installation and setup](getting-started/installation.md)
 - [Client configuration and troubleshooting](getting-started/client-configuration.md)
 - [CLI and Evidence](getting-started/cli.md)
