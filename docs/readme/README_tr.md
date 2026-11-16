@@ -404,3 +404,15 @@ paylaşımı kısıtlamaları dahil olmak üzere satıcı koşullarına tabidir.
 kopyalar, çalınmış anahtarlar, yetkisiz anahtar paylaşımı ve lisans
 kısıtlamalarını aşma yetkili kullanım kapsamında değildir. Bu yönlendirme MIT
 veya üçüncü taraf lisanslarını değiştirmez.
+
+## Transformaiton.com fork
+
+This translation follows the upstream REA README. Customer pages for this fork are in English.
+
+- [Install](../INSTALL.md)
+- [Usage](../USAGE.md)
+- [Transformaiton.com](https://transformaiton.com/)
+- [info@transformaiton.com](mailto:info@transformaiton.com)
+- [Transformaiton on GitHub](https://github.com/Transformaiton)
+
+![REA by Transformaiton.com terminal recording](../assets/transformaiton-rea-demo.gif)

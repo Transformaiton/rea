@@ -80,7 +80,7 @@ export default defineConfig({
       });
     },
   },
-  srcExclude: ["readme/**"],
+  srcExclude: ["readme/**", "examples/**"],
   themeConfig: {
     nav: [
       { text: "Get started", link: "/installation" },

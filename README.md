@@ -1,5 +1,162 @@
 <div align="center">
 
+# REA by Transformaiton.com
+
+Study a website or landing page you own, see how it is built, and rebuild it in your own project.
+
+Local analysis for small businesses, from the terminal or from your agent.
+
+</div>
+
+![Terminal recording of REA analyzing the sample landing page in this repository](docs/assets/transformaiton-rea-demo.gif)
+
+The recording is a real run of published `rea-agents` 6.9.0 against `docs/examples/sample-landing-page`. It exited 0. The captured terminal text is `docs/assets/transformaiton-rea-demo.txt`. A still of the last frame is `docs/assets/transformaiton-rea-demo.png`.
+
+**REA by Transformaiton.com** is a local toolkit for reading a site, landing page, or application you are allowed to study. It reports what it found and the evidence for each finding. Your team can use that report to implement your own page. Analysis stays on your machine.
+
+This repository is Transformaiton.com's public fork of REA. It is not affiliated with, endorsed by, or maintained by the original author or by rea.tools. The MIT license and the original copyright stay in place. Credits are below.
+
+## Responsible use
+
+Only reverse engineer websites, landing pages, applications, and files you own or have permission to analyze. Being able to open a page does not give you the right to copy its design, text, trademarks, or code. The project limits are in `DISCLAIMER.md`.
+
+## What it does
+
+- Reads a local JavaScript site, Electron app, or other supported package and returns modules, imports, and related evidence.
+- Connects to an agent through a local MCP server, or runs as the `rea` command in your terminal.
+- Leaves the target on disk. Transformaiton.com does not receive the files you analyze.
+- Can observe a browser you start yourself, when you need the live page rather than a saved copy.
+- Can inspect native binaries when you supply Hopper, Ghidra, IDA, or Kuna. Those engines are optional for website and landing-page work.
+
+The capability list, showcases, and community links in the upstream README further down describe the original project. They are not Transformaiton.com case studies, and they do not mean the original project endorses this fork.
+
+## Small-business use cases
+
+Use these when you have the rights to the target:
+
+- **A landing page you own.** See which scripts render the hero, the offer, and the inquiry form before you rebuild those sections.
+- **A client site you are allowed to study.** Map the pages and assets the redesign has to cover, and keep each note tied to a file.
+- **Your own marketing site.** Check a rebuild against the page you already publish.
+- **A widget your business ships.** Read the front-end structure of a booking block or a checkout step you maintain.
+
+REA does not make someone else's page yours. Implement the new page with your own markup, styles, and copy.
+
+## Requirements
+
+- Node.js 22.x (22.23.4 or newer), 24.x (24.22.1 or newer), or Node.js 26.12.1 or newer, plus npm.
+- On Linux, a procps-compatible `ps` for process-ownership checks. Static JavaScript analysis uses those checks.
+- A Chrome-family browser only if you observe a live page.
+- Hopper, Ghidra, IDA, or Kuna only if you analyze native binaries. Setup can install Hopper after you approve that step. Ghidra and IDA are bring-your-own.
+
+The version table and platform notes are in the install guide linked below.
+
+## Install
+
+The full click-through is in the install guide. Short version:
+
+1. Install a supported Node.js and confirm `node -v` and `npm -v`.
+2. Connect an agent, or install the `rea` command.
+3. Read the setup plan and approve it before any configuration file is written.
+4. Restart the agent.
+
+Connect an agent:
+
+```sh
+npx rea-agents setup
+```
+
+Inspect a JavaScript application directory you are allowed to read. The sample landing page in this repository is a safe first target:
+
+```sh
+npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+```
+
+Install the command for regular use:
+
+```sh
+npm install --global rea-agents
+rea --help
+```
+
+Update a global install, then refresh agent setup:
+
+```sh
+rea update
+```
+
+```sh
+npx rea-agents@latest setup
+```
+
+Step-by-step install, source checkout, and recovery: [Install REA](docs/INSTALL.md).
+
+## Quick start
+
+Try the fictional page in `docs/examples/sample-landing-page` (Harbor and Rye). It was written for this repository. From a machine where `rea` is installed:
+
+```sh
+rea analyze-javascript-application "$PWD/docs/examples/sample-landing-page" --json
+```
+
+Or ask your agent, after setup:
+
+```text
+Look at the landing page in docs/examples/sample-landing-page. Tell me which
+scripts render the headline and the visit link, show the evidence, and sketch
+a simple page our project could implement from that description.
+```
+
+For a site you own, point the same question at your copy of that site and name the sections you want to rebuild. More commands, including a browser you start yourself, are in [Use REA](docs/USAGE.md).
+
+## Troubleshooting
+
+| What you see                        | What to do                                                                                             |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Node.js is too old                  | Install Node.js 22.23.4+, 24.22.1+, or 26.12.1+, then retry.                                           |
+| `REA's compiled runtime is missing` | You are in a source checkout. Run `npm ci` and `npm run build:cached` in the repository root.          |
+| Linux analysis stops and names `ps` | Install `procps` or `procps-ng`. REA uses the system `ps`.                                             |
+| The agent has no REA tools          | Run setup, approve the plan, and restart the agent.                                                    |
+| The same command still fails        | Update, retry once, then email the version, target type, command, and error text to the address below. |
+
+Update a global install:
+
+```sh
+rea update
+```
+
+Refresh an `npx` setup:
+
+```sh
+npx rea-agents@latest setup
+```
+
+More recovery steps are in `docs/INSTALL.md`.
+
+## Built and supported by Transformaiton.com
+
+Transformaiton.com is an AI consultancy for small businesses. We publish this fork and these customer guides for teams who study and recreate websites and landing pages they own or have rights to.
+
+- Website: [transformaiton.com](https://transformaiton.com/)
+- Email: [info@transformaiton.com](mailto:info@transformaiton.com)
+- GitHub: [github.com/Transformaiton](https://github.com/Transformaiton)
+
+Questions about this guide, or about using the toolkit on a site you are allowed to analyze, go to that email address.
+
+## Credits
+
+REA is copyright (c) 2026 morluto and is licensed under the MIT License. This fork does not change `LICENSE`. Third-party components keep their own notices in `THIRD_PARTY_NOTICES.md`.
+
+The original project is `morluto/rea` on GitHub. Get official upstream releases from that repository, from rea.tools, or from the `rea-agents` npm package, using the links in the upstream README below. A similar repository name does not make this fork an official source. Transformaiton.com is not endorsed by the original author or by rea.tools.
+
+## Upstream README
+
+The rest of this file is the upstream project README, kept so the original description, license wording, and documentation links remain available. Inner disclosure sections are expanded so this one section can stay collapsed.
+
+<details>
+<summary>Upstream REA README (original project, not a Transformaiton.com endorsement)</summary>
+
+<div align="center">
+
 **English** · [简体中文](docs/readme/README_zh.md) · [繁體中文](docs/readme/README_zh-TW.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Türkçe](docs/readme/README_tr.md) · [Русский](docs/readme/README_ru.md) · [Tiếng Việt](docs/readme/README_vi.md) · [ไทย](docs/readme/README_th.md) · [Deutsch](docs/readme/README_de.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Українська](docs/readme/README_uk.md) · [Polski](docs/readme/README_pl.md) · [Português (Brasil)](docs/readme/README_pt-BR.md) · [العربية](docs/readme/README_ar.md) · [فارسی](docs/readme/README_fa.md) · [Bahasa Indonesia](docs/readme/README_id.md) · [Italiano](docs/readme/README_it.md)
 · [Ελληνικά](docs/readme/README_el.md) · [മലയാളം](docs/readme/README_ml.md) · [Roman Urdu](docs/readme/README_ur-Latn.md) · [Română](docs/readme/README_ro.md) · [Български](docs/readme/README_bg.md)
 
@@ -319,8 +476,8 @@ Save it in a folder named my-env. Check which operations work and tell me
 how to run it.
 ```
 
-<details>
-<summary>Use the command line instead</summary>
+<div>
+<h3>Use the command line instead</h3>
 
 Use these commands if you already have a file containing the app’s recorded browser requests and responses. Running the result also requires AgentEnv and Docker.
 
@@ -329,7 +486,7 @@ rea environment-build ./session.har ./my-env --name my-env --json
 agent-env run ./my-env
 ```
 
-</details>
+</div>
 
 REA exports a runnable environment with a basic test to check that it starts and responds. Use it with your RL framework to define task goals, add reward checks, and run training.
 
@@ -345,17 +502,17 @@ REA can also build an environment of a Linux desktop app, which an agent uses th
 
 ## FAQ
 
-<details>
-<summary><strong>Which agents can use REA?</strong></summary>
+<div>
+<h3><strong>Which agents can use REA?</strong></h3>
 
 Any agent that supports local MCP servers. Setup configures the
 [supported agents](docs/getting-started/installation.md#supported-agents); other clients can use
 [manual MCP registration](docs/getting-started/installation.md#mcp-registry).
 
-</details>
+</div>
 
-<details>
-<summary><strong>Do I need a native analysis engine?</strong></summary>
+<div>
+<h3><strong>Do I need a native analysis engine?</strong></h3>
 
 Deep native analysis uses Hopper, Ghidra, IDA or Kuna, depending on the target
 and operation. Static JavaScript and .NET inspection work without a native
@@ -363,10 +520,10 @@ analysis engine. Setup can install Hopper after approval; Ghidra, IDA and Kuna
 use your existing installations. See [provider setup](docs/getting-started/installation.md#hopper)
 for the options and their supported targets.
 
-</details>
+</div>
 
-<details>
-<summary><strong>Do I need to start Hopper first?</strong></summary>
+<div>
+<h3><strong>Do I need to start Hopper first?</strong></h3>
 
 REA starts Hopper when an operation needs it. On macOS, a first-run dialog may
 ask you to choose demo mode or activate your license. Complete that prompt in the
@@ -374,36 +531,36 @@ same user session before your first CLI/MCP operation or unattended job. Open
 Hopper manually if needed. See
 [Hopper startup and troubleshooting](docs/getting-started/installation.md#launcher-paths-and-troubleshooting).
 
-</details>
+</div>
 
-<details>
-<summary><strong>What does installing the skill from skills.sh do?</strong></summary>
+<div>
+<h3><strong>What does installing the skill from skills.sh do?</strong></h3>
 
 The skill supplies investigation instructions for your agent. Use `npx rea-agents setup`
 to register REA's MCP server and install the matching instructions, then restart
 your agent. See [skill-only installation](docs/getting-started/installation.md#skill-only-installation).
 
-</details>
+</div>
 
-<details>
-<summary><strong>What code does REA return?</strong></summary>
+<div>
+<h3><strong>What code does REA return?</strong></h3>
 
 Native analysis returns pseudocode and assembly. JavaScript/Electron analysis
 recovers modules and their relationships. Your agent uses these findings to
 write and test an implementation; the [showcases](#showcases) give worked examples.
 
-</details>
+</div>
 
-<details>
-<summary><strong>Does REA upload my app?</strong></summary>
+<div>
+<h3><strong>Does REA upload my app?</strong></h3>
 
 REA analyzes targets locally. Your agent receives the tool results, and its
 model provider has its own data policy.
 
-</details>
+</div>
 
-<details>
-<summary><strong>What should I do if I hit a bug?</strong></summary>
+<div>
+<h3><strong>What should I do if I hit a bug?</strong></h3>
 
 Update first; a recent release may already fix it.
 
@@ -423,7 +580,7 @@ If you're using an agent, complete the [setup refresh](#update-rea) and restart
 it. Retry the same task. If the problem persists, [open an issue](https://github.com/morluto/rea/issues)
 with your REA version, target type, steps to reproduce and error output.
 
-</details>
+</div>
 
 ## Documentation
 
@@ -489,3 +646,5 @@ demos remain subject to vendor terms, including user, feature, automation, and
 output sharing restrictions. Cracked copies, stolen keys, unauthorized key
 sharing, and bypassing license restrictions are not authorized. This guidance
 does not amend MIT or third-party licenses.
+
+</details>

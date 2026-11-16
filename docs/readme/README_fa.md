@@ -389,3 +389,15 @@ and bypassing license restrictions are not authorized. This guidance does not
 amend MIT or third-party licenses.
 
 </div>
+
+## Transformaiton.com fork
+
+This translation follows the upstream REA README. Customer pages for this fork are in English.
+
+- [Install](../INSTALL.md)
+- [Usage](../USAGE.md)
+- [Transformaiton.com](https://transformaiton.com/)
+- [info@transformaiton.com](mailto:info@transformaiton.com)
+- [Transformaiton on GitHub](https://github.com/Transformaiton)
+
+![REA by Transformaiton.com terminal recording](../assets/transformaiton-rea-demo.gif)

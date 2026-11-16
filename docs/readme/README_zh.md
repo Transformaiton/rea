@@ -401,3 +401,15 @@ REA 自行编写的代码采用 MIT 许可；第三方内容保留各自的许�
 Hopper 和 JEB，并遵守各自许可。REA 不提供工具许可、密钥或激活权利；试用版和
 演示版也须遵守厂商对用户、功能、自动化及输出分享的限制。不得使用破解副本、
 窃取或违规共用密钥，也不得绕过许可限制。本指引不变更 MIT 或第三方许可。
+
+## Transformaiton.com fork
+
+This translation follows the upstream REA README. Customer pages for this fork are in English.
+
+- [Install](../INSTALL.md)
+- [Usage](../USAGE.md)
+- [Transformaiton.com](https://transformaiton.com/)
+- [info@transformaiton.com](mailto:info@transformaiton.com)
+- [Transformaiton on GitHub](https://github.com/Transformaiton)
+
+![REA by Transformaiton.com terminal recording](../assets/transformaiton-rea-demo.gif)

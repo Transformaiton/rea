@@ -496,3 +496,15 @@ condițiilor furnizorilor, inclusiv restricțiilor privind utilizatorii,
 funcționalitățile, automatizarea și partajarea rezultatelor. Nu sunt autorizate
 copiile piratate, cheile furate, partajarea neautorizată a cheilor sau ocolirea
 restricțiilor de licențiere. Aceste îndrumări nu modifică licența MIT sau licențele terților.
+
+## Transformaiton.com fork
+
+This translation follows the upstream REA README. Customer pages for this fork are in English.
+
+- [Install](../INSTALL.md)
+- [Usage](../USAGE.md)
+- [Transformaiton.com](https://transformaiton.com/)
+- [info@transformaiton.com](mailto:info@transformaiton.com)
+- [Transformaiton on GitHub](https://github.com/Transformaiton)
+
+![REA by Transformaiton.com terminal recording](../assets/transformaiton-rea-demo.gif)

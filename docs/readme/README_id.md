@@ -426,3 +426,15 @@ remain subject to vendor terms, including user, feature, automation, and output
 sharing restrictions. Cracked copies, stolen keys, unauthorized key sharing,
 and bypassing license restrictions are not authorized. This guidance does not
 amend MIT or third-party licenses.
+
+## Transformaiton.com fork
+
+This translation follows the upstream REA README. Customer pages for this fork are in English.
+
+- [Install](../INSTALL.md)
+- [Usage](../USAGE.md)
+- [Transformaiton.com](https://transformaiton.com/)
+- [info@transformaiton.com](mailto:info@transformaiton.com)
+- [Transformaiton on GitHub](https://github.com/Transformaiton)
+
+![REA by Transformaiton.com terminal recording](../assets/transformaiton-rea-demo.gif)
